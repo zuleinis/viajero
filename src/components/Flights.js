@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Flights.css";
+import Quotes from "./Quotes";
 
 function Flights() {
   const [quotes, setQuotes] = useState([]);
@@ -29,10 +30,13 @@ function Flights() {
         reqOptions
       );
       response = await response.json();
-      console.log(response.quotes);
-      setQuotes(response.quotes);
+      console.log(response.Quotes);
+      setQuotes(response.Quotes);
     }
     fetchMyAPI();
+    setDestination("");
+    setOrigin("");
+    setoDate("");
   }
 
   return (
@@ -71,8 +75,9 @@ function Flights() {
           onChange={(e) => setoDate(e.target.value)}
           required
         />
-        <button className="search">Submit</button>
+        <button className="search">Search</button>
       </form>
+      <Quotes quotes={quotes}></Quotes>
     </div>
   );
 }
