@@ -1,31 +1,13 @@
 import React, { useState } from "react";
 import "./Flights.css";
-import "date-fns";
-import Grid from "@material-ui/core/Grid";
-import DateFnsUtils from "@date-io/date-fns";
-import {
-  MuiPickersUtilsProvider,
-  KeyboardDatePicker,
-} from "@material-ui/pickers";
 
 function Flights() {
   const [quotes, setQuotes] = useState([]);
   const [Destination, setDestination] = useState("");
   const [Origin, setOrigin] = useState("");
-  const [outDate, setDate] = React.useState(new Date("2020-09-11"));
-  const qDestination = {
-    destinationplace: Destination,
-  };
-  const qOrigin = {
-    originplace: Origin,
-  };
-  const qDate = {
-    outboundpartialdate: outDate,
-  };
+  const [oDate, setoDate] = useState("");
 
-  const handleDateChange = (date) => {
-    setDate(date);
-  };
+  const qString = Destination + "/" + Origin + "/" + oDate;
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -42,13 +24,12 @@ function Flights() {
       };
 
       let response = await fetch(
-        "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/?" +
-          new URLSearchParams(qDestination) +
-          new URLSearchParams(qOrigin) +
-          new URLSearchParams(qDate),
+        "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/" +
+          qString,
         reqOptions
       );
       response = await response.json();
+      console.log(response.quotes);
       setQuotes(response.quotes);
     }
     fetchMyAPI();
@@ -79,25 +60,19 @@ function Flights() {
           onChange={(e) => setOrigin(e.target.value)}
           required
         />
+        <label className="font" htmlFor="dateInput">
+          on
+        </label>
+        <input
+          className="input"
+          placeholder="YYYY-MM-DD"
+          id="dateInput"
+          value={oDate}
+          onChange={(e) => setoDate(e.target.value)}
+          required
+        />
         <button className="search">Submit</button>
       </form>
-      <MuiPickersUtilsProvider utils={DateFnsUtils}>
-        <Grid container justify="space-around">
-          <KeyboardDatePicker
-            disableToolbar
-            variant="inline"
-            format="yyyy-MM-dd"
-            margin="normal"
-            id="datePicker"
-            label="Date Picker"
-            value={outDate}
-            onChange={handleDateChange}
-            KeyboardButtonProps={{
-              "aria-label": "change date",
-            }}
-          />
-        </Grid>
-      </MuiPickersUtilsProvider>
     </div>
   );
 }
