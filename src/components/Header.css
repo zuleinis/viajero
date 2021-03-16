@@ -1,6 +1,6 @@
 .header {
   background-color: rgb(253, 131, 103);
-  min-height: 10vh;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;

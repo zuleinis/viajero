@@ -7,8 +7,10 @@ function Flights() {
   const [Destination, setDestination] = useState("");
   const [Origin, setOrigin] = useState("");
   const [oDate, setoDate] = useState("");
+  const [Currency, setCurrency] = useState("");
 
-  const qString = Destination + "/" + Origin + "/" + oDate;
+  const qString =
+    Currency + "/en-US/" + Destination + "/" + Origin + "/" + oDate;
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -25,7 +27,7 @@ function Flights() {
       };
 
       let response = await fetch(
-        "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/" +
+        "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/" +
           qString,
         reqOptions
       );
@@ -34,9 +36,6 @@ function Flights() {
       setQuotes(response.Quotes);
     }
     fetchMyAPI();
-    setDestination("");
-    setOrigin("");
-    setoDate("");
   }
 
   return (
@@ -73,6 +72,17 @@ function Flights() {
           id="dateInput"
           value={oDate}
           onChange={(e) => setoDate(e.target.value)}
+          required
+        />
+        <label className="font" htmlFor="currencyInput">
+          in
+        </label>
+        <input
+          className="input"
+          placeholder="E.g. USD"
+          id="currencyInput"
+          value={Currency}
+          onChange={(e) => setCurrency(e.target.value)}
           required
         />
         <button className="search">Search</button>

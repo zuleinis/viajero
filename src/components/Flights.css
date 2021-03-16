@@ -1,7 +1,7 @@
 .flights {
   width: 100%;
   margin-top: 2in;
-  height: 80vh;
+  height: 100%;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -9,6 +9,7 @@
 }
 
 form {
+  width: 1100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,12 +33,13 @@ form {
 .font {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 30px;
   margin: 15px;
 }
 
 .input {
-  width: fit-content;
+  width: 115px;
+  height: 30PX;
   padding: 10px 20px;
   margin: 8px 0;
   box-sizing: border-box;
