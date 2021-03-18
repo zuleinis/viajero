@@ -17,12 +17,12 @@ form {
 }
 
 .search {
-  background-color: #fd8367;
-  padding: 15px 20px;
+  background-color: #496da1;
+  padding: 15px 15px;
   height: 10px;
   color: white;
   border-radius: 20px;
-  border-color: #fd8367;
+  border-color: #496da1;
   display: block;
   line-height: 0px;
   font-size: 16px;
@@ -38,17 +38,13 @@ form {
 }
 
 .input {
-  width: 115px;
-  height: 30PX;
+  width: 120px;
+  height: 30px;
   padding: 10px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid #3f526e;
-}
-
-#queryInput {
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-  border-radius: 5px;
-  padding: 10px;
+  border-bottom: 2px solid #496da1;
+  background-color: rgba(253, 255, 252, 0.9);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

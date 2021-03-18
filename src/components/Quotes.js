@@ -9,6 +9,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 
+//Table Styling
 const useStyles = makeStyles({
   table: {
     maxHeight: 700,
@@ -27,20 +28,22 @@ const useStyles = makeStyles({
   },
 
   header: {
-    background: "rgb(173, 232, 244)",
+    background: "#496da1",
     fontSize: "15px",
     fontFamily: "Segoe UI",
     fontWeight: "bold",
+    color: "white",
   },
 });
 
+//Function that generates a table with flights information
 function Quotes(props) {
   const classes = useStyles();
 
   return (
     <TableContainer className={classes.paper} component={Paper}>
       <div className={classes.table}>
-        <Table stickyHeader aria-label="simple table">
+        <Table stickyHeader aria-label="flights table">
           <TableHead>
             <TableRow>
               <TableCell className={classes.header}>Flight</TableCell>

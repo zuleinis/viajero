@@ -8,10 +8,13 @@ function Flights() {
   const [Origin, setOrigin] = useState("");
   const [oDate, setoDate] = useState("");
   const [Currency, setCurrency] = useState("");
+  const [ShowQuotes, setShowQuotes] = useState(false);
 
+  //Variable that generates the api url
   const qString =
     Currency + "/en-US/" + Destination + "/" + Origin + "/" + oDate;
 
+  //Function that fetches flights information
   function handleSubmit(e) {
     e.preventDefault();
     async function fetchMyAPI() {
@@ -36,6 +39,7 @@ function Flights() {
       setQuotes(response.Quotes);
     }
     fetchMyAPI();
+    setShowQuotes(true);
   }
 
   return (
@@ -87,7 +91,7 @@ function Flights() {
         />
         <button className="search">Search</button>
       </form>
-      <Quotes quotes={quotes}></Quotes>
+      {ShowQuotes ? <Quotes quotes={quotes}></Quotes> : <></>}
     </div>
   );
 }
