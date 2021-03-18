@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/viajero/static/css/main.89dc1f8e.chunk.css",
+    "main.js": "/viajero/static/js/main.40d2e877.chunk.js",
+    "main.js.map": "/viajero/static/js/main.40d2e877.chunk.js.map",
+    "runtime-main.js": "/viajero/static/js/runtime-main.4e62d0f3.js",
+    "runtime-main.js.map": "/viajero/static/js/runtime-main.4e62d0f3.js.map",
+    "static/js/2.65a81803.chunk.js": "/viajero/static/js/2.65a81803.chunk.js",
+    "static/js/2.65a81803.chunk.js.map": "/viajero/static/js/2.65a81803.chunk.js.map",
+    "static/js/3.9d6bacd2.chunk.js": "/viajero/static/js/3.9d6bacd2.chunk.js",
+    "static/js/3.9d6bacd2.chunk.js.map": "/viajero/static/js/3.9d6bacd2.chunk.js.map",
+    "index.html": "/viajero/index.html",
+    "static/css/main.89dc1f8e.chunk.css.map": "/viajero/static/css/main.89dc1f8e.chunk.css.map",
+    "static/js/2.65a81803.chunk.js.LICENSE.txt": "/viajero/static/js/2.65a81803.chunk.js.LICENSE.txt",
+    "static/media/logo.04e491a1.png": "/viajero/static/media/logo.04e491a1.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4e62d0f3.js",
+    "static/js/2.65a81803.chunk.js",
+    "static/css/main.89dc1f8e.chunk.css",
+    "static/js/main.40d2e877.chunk.js"
+  ]
+}
