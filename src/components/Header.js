@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css";
 import logo from "./logo.png";
 
-function Header(props) {
+function Header() {
   return (
     <div className="header">
       <div>

@@ -1,10 +1,10 @@
 import React from "react";
 import "./Footer.css";
 
-function Footer(props) {
+function Footer() {
   return (
     <div className="footer">
-      Software Engineering Summit 2021 Challenge by Capital One
+      2021 Software Engineering Summit Challenge by Capital One
       <br />
       Created by Zuleinis Ramos
     </div>

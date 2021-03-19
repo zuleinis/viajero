@@ -12,27 +12,39 @@ import Paper from "@material-ui/core/Paper";
 //Table Styling
 const useStyles = makeStyles({
   table: {
-    maxHeight: 700,
-    width: 1000,
+    height: 425,
+    width: 875,
+    display: "flex",
   },
 
   paper: {
-    marginTop: 100,
+    marginTop: 30,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: 1000,
-    margin: 75,
+    width: 875,
     boxShadow: "0 0 5px 5px rgba(1, 22, 39, .1)",
     background: "rgba(253, 255, 252, .9)",
   },
 
   header: {
-    background: "#496da1",
-    fontSize: "15px",
+    background: "#6699c8",
+    fontSize: "17px",
     fontFamily: "Segoe UI",
     fontWeight: "bold",
     color: "white",
+  },
+
+  price: {
+    color: "#01ba00",
+    fontFamily: "Segoe UI",
+    fontWeight: "bold",
+    fontSize: "17px",
+  },
+
+  font: {
+    fontFamily: "Segoe UI",
+    fontSize: "17px",
   },
 });
 
@@ -61,16 +73,16 @@ function Quotes(props) {
           <TableBody>
             {props.quotes.map((quote) => (
               <TableRow key={quote.QuoteId}>
-                <TableCell component="th" scope="row">
+                <TableCell className={classes.font} component="th" scope="row">
                   {quote.QuoteId}
                 </TableCell>
                 <TableCell className={classes.price} align="right">
                   {quote.MinPrice}
                 </TableCell>
-                <TableCell align="right">
+                <TableCell className={classes.font} align="right">
                   {quote.OutboundLeg.DepartureDate}
                 </TableCell>
-                <TableCell align="right">
+                <TableCell className={classes.font} align="right">
                   {quote.OutboundLeg.CarrierIds}
                 </TableCell>
               </TableRow>

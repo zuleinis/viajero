@@ -1,7 +1,6 @@
 .flights {
   width: 100%;
-  margin-top: 2in;
-  height: 100%;
+  margin-top: 1.15in;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -9,7 +8,7 @@
 }
 
 form {
-  width: 1100px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,14 +16,14 @@ form {
 }
 
 .search {
-  background-color: #496da1;
+  background-color: #fd8367;
   padding: 15px 15px;
   height: 10px;
   color: white;
   border-radius: 20px;
-  border-color: #496da1;
-  display: block;
-  line-height: 0px;
+  border-color: #fd8367;
+  display: flex;
+  align-items: center;
   font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 15px;
@@ -33,18 +32,18 @@ form {
 .font {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   margin: 15px;
 }
 
 .input {
-  width: 120px;
+  max-width: 100px;
   height: 30px;
   padding: 10px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid #496da1;
+  border-bottom: 2px solid #6699c8;
   background-color: rgba(253, 255, 252, 0.9);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

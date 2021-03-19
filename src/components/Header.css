@@ -1,5 +1,11 @@
 .header {
-  background-color: rgb(253, 131, 103);
+  background: rgb(253, 131, 103);
+  background: radial-gradient(
+    circle,
+    rgba(253, 131, 103, 1) 0%,
+    rgba(255, 175, 200, 1) 53%,
+    rgba(192, 220, 244, 1) 100%
+  );
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -12,7 +18,7 @@
 }
 
 .logo {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 35%;
+  max-height: 30%;
   position: inherit;
 }
