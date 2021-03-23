@@ -2,6 +2,8 @@
 
 Viajero Flight Search: A web app that lets users view their cheapest flight options between two destinations for specific dates in their desired currency using Skyscanner API.
 
+Web app: https://zuleinis.github.io/viajero/
+
 ## Tools Used
 
 - React.js (JavaScript library)
